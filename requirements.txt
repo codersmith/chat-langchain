@@ -13,4 +13,4 @@ unstructured
 libmagic
 python-dotenv
 tiktoken
-PyPDF2
+pypdf
