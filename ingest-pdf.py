@@ -10,7 +10,7 @@ load_dotenv()
 
 def ingest_pdf_docs():
     """Read PDF documents in `./pdf/*`."""
-    loader = PyPDFDirectoryLoader(path="./pdfs", glob="**/[!.]*.pdf")
+    loader = PyPDFDirectoryLoader(path="pdfs/", glob="**/[!.]*.pdf")
     pages = loader.load_and_split()
     vectorstore = FAISS.from_documents(pages, OpenAIEmbeddings())
 
